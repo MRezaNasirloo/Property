@@ -22,7 +22,22 @@ class PropertyServiceProvider extends ServiceProvider {
 	{
 		$this->app->bind(PropertyInterface::class, Property::class);	
 		$this->app->bind(PropertyValueInterface::class, PropertyValue::class);		
-	}		
+	}
+
+	/**
+     * Register the property related console commands.
+     *
+     * @return void
+     */
+    public function registerCommands()
+    {
+        $this->app->singleton('command.jiro.property.install', function($app)
+        {
+            return new Console\InstallCommand($app['files'], $app['composer']);
+        });
+
+        $this->commands('command.jiro.property.install');
+    }
 
 	/**
 	 * Get the services provided by the provider.
