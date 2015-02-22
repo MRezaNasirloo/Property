@@ -1,10 +1,10 @@
-<?php namespace Jiro\Propety;
+<?php namespace Jiro\Property;
 
 use Illuminate\Support\ServiceProvider;
 use Jiro\Property\Database\Eloquent\Property;
 use Jiro\Property\Database\Eloquent\PropertyValue;
 
-class ProductServiceProvider extends ServiceProvider {
+class PropertyServiceProvider extends ServiceProvider {
 
 	/**
 	 * Indicates if loading of the provider is deferred.

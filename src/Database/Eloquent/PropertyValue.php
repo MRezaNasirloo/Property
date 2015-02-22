@@ -8,7 +8,7 @@ use Jiro\Property\PropertyInterface;
 /**
  *  Model for property values.
  *
- *  This abstract class must impliment the appropriate methods. See docs.
+ *  This abstract class must implement the appropriate methods. See docs.
  *
  * @author Andrew McLagan <andrewmclagan@gmail.com>
  */
